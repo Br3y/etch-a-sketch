@@ -5,6 +5,7 @@ function createDivs(num) {
         for(let col = 0; col < num; col++){
             let div = document.createElement("div");
             div.classList.add("grids");
+            div.style.width = `calc(100% / ${gridSize})`;
             container.appendChild(div);
         }
     }
