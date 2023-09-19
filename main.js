@@ -1,8 +1,8 @@
 const container = document.querySelector(".container");
 
-function createDivs(cols, rows) {
-    for (let i = 0; i < cols; i++) {
-        for (j = 0; j < rows; j++) {
+function createDivs(num) {
+    for(let row = 0; row < num; row++){
+        for(let col = 0; col < num; col++){
             let div = document.createElement("div");
             div.classList.add("grids");
             container.appendChild(div);
@@ -10,4 +10,4 @@ function createDivs(cols, rows) {
     }
 }
 
-createDivs(16, 16)
+createDivs(16)
