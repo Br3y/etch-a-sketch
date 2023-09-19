@@ -10,4 +10,6 @@ h1 {
   width: 690px;
   height: 690px;
   border: 1px solid black;
+  display:flex;
+  flex-wrap:wrap;
 }
