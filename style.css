@@ -12,8 +12,9 @@ h1 {
   border: 1px solid black;
   display:flex;
   flex-wrap:wrap;
+  border-radius: 3px;
 }
 
 .grids{
-  border:1px solid black;
+  border:1px solid gray;
 }
