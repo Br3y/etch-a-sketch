@@ -1,5 +1,6 @@
 const container = document.querySelector(".container");
 const gridSize = 16;
+
 function createDivs(num) {
     for(let row = 0; row < num; row++){
         for(let col = 0; col < num; col++){
@@ -10,5 +11,9 @@ function createDivs(num) {
         }
     }
 }
-
 createDivs(gridSize)
+
+const grids = document.querySelectorAll(".grids");
+grids.forEach((grid) => grid.addEventListener("mouseover", ()=>{
+    grid.style.backgroundColor = "black";
+}));
