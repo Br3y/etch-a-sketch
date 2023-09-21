@@ -3,12 +3,16 @@
   margin: 0 auto;
   padding: 0;
 }
+body{
+  width:690px;
+  height:690px;
+}
 h1 {
   text-align: center;
 }
 .container {
-  width: 690px;
-  height: 690px;
+  width: 100%;
+  height: 100%;
   border: 1px solid black;
   display:flex;
   flex-wrap:wrap;
