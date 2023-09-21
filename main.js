@@ -30,3 +30,13 @@ const resetButton = document.querySelector("#reset");
 resetButton.addEventListener("click", ()=>{
     grids.forEach((grid) => grid.style.backgroundColor = "white");
 })
+
+
+// MAKING GRID COLORED RANDOMLY WHEN RGB BUTTON IS CLICK
+const rgb = document.querySelector("#rgb");
+rgb.addEventListener("click", ()=>{
+    grids.forEach((grid) => grid.addEventListener("mouseover", ()=>{
+        let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+        grid.style.backgroundColor = `#${randomColor}`;
+    }));
+})
