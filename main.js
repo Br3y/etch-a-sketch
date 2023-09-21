@@ -23,3 +23,10 @@ const grids = document.querySelectorAll(".grids");
 grids.forEach((grid) => grid.addEventListener("mouseover", ()=>{
     grid.style.backgroundColor = "black";
 }));
+
+
+// RESET BUTTON
+const resetButton = document.querySelector("#reset");
+resetButton.addEventListener("click", ()=>{
+    grids.forEach((grid) => grid.style.backgroundColor = "white");
+})
