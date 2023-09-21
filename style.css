@@ -23,3 +23,23 @@ h1 {
   border:1px solid gray;
   border-radius:6px;
 }
+
+.input-button-container{
+  width:100%;
+  display:flex;
+  flex:1;
+  margin-top:25px;
+}
+input[type=range]{
+  flex:0 0 40%;
+}
+label{
+  flex:0 0 10%;
+  font-size: 2em;
+  align-self: center;
+  text-align: center;
+}
+button{
+  padding:16px 32px;
+  border-radius: 6px;
+}
