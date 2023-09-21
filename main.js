@@ -1,7 +1,13 @@
 // DECLARATION
 const container = document.querySelector(".container");
-let gridSize = document.querySelector("#range");
-gridSize = gridSize.value;
+let range = document.querySelector("#range");
+let gridSize = range.value;
+
+// CHANGING gridsize in label
+const label = document.querySelector("label");
+range.addEventListener("mousemove", ()=>{
+    label.textContent = range.value;
+})
 
 // IT WILL CALCULATE GRIDNUMBER * GRIDNUMBER USING FOR LOOP
 function createDivs(num) {
@@ -17,7 +23,7 @@ function createDivs(num) {
 // CALL createDivs function
 createDivs(gridSize)
 
-// DECLARE GRIDS
+// DECLARE GRIDS FOR BUTTON
 const grids = document.querySelectorAll(".grids");
 // IT WILL MAKE SINGLE GRID BLACK WHEN HOVER
 function changeToBlackButton(grids){
