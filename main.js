@@ -20,17 +20,23 @@ createDivs(gridSize)
 // DECLARE GRIDS
 const grids = document.querySelectorAll(".grids");
 // IT WILL MAKE SINGLE GRID BLACK WHEN HOVER
-grids.forEach((grid) => grid.addEventListener("mouseover", ()=>{
-    grid.style.backgroundColor = "black";
-}));
-
+function changeToBlackButton(grids){
+    grids.forEach((grid) => grid.addEventListener("mouseover", ()=>{
+        grid.style.backgroundColor = "black";
+    }));
+}
+changeToBlackButton(grids)
 
 // RESET BUTTON
 const resetButton = document.querySelector("#reset");
 resetButton.addEventListener("click", ()=>{
     grids.forEach((grid) => grid.style.backgroundColor = "white");
 })
-
+// RESET TO BLACK BUTTON
+const blackButton = document.querySelector("#black");
+blackButton.addEventListener("click", ()=>{
+    changeToBlackButton(grids)
+})
 
 // MAKING GRID COLORED RANDOMLY WHEN RGB BUTTON IS CLICK
 const rgb = document.querySelector("#rgb");
