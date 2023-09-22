@@ -72,11 +72,16 @@ const grids = document.querySelectorAll(".grids");
 // IT WILL MAKE SINGLE GRID BLACK WHEN HOVER
 function changeToBlackButton(grids){
 
-    grids.forEach((grid) => grid.addEventListener("mouseover", ()=>{
+        let opacity = 0.1;
+       
+        grids.forEach((grid) => grid.addEventListener("mouseover", ()=>{
+            
+            grid.style.backgroundColor = `rgba(0, 0, 0, ${opacity})`;
+       
+            opacity += 0.1;
+       
+        }));
 
-        grid.style.backgroundColor = "black";
-
-    }));
 
 }
 
