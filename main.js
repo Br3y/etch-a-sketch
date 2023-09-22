@@ -1,23 +1,30 @@
 // DECLARATION
 const container = document.querySelector(".container");
 
+const label = document.querySelector("label");
+
 let range = document.querySelector("#range");
 
 let gridSize = range.value;
 
 
-// CHANGING gridsize in label
-const label = document.querySelector("label");
+// WHEN SCROLLBAR CLICK, GO TO FUNCTION
+range.addEventListener("click", moveScroll );
 
-range.addEventListener("mousemove", ()=>{
+// CHANGING gridsize
+function moveScroll(){
+    
+    range.addEventListener("mousemove", ()=>{
+    
+        label.textContent = range.value;
+    
+        removeAllGrids();
+    
+        createDivs(gridSize)
+    
+    })
 
-    label.textContent = range.value;
-
-    removeAllGrids();
-
-    createDivs(gridSize)
-
-})
+}
 
 
 // REMOVE ALL GRIDS
