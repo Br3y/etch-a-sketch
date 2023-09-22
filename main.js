@@ -19,7 +19,8 @@ function moveScroll(){
         label.textContent = range.value;
     
         removeAllGrids();
-    
+        
+        // gridSize = parseFloat(label.textContent);
         createDivs(gridSize)
     
     })
@@ -41,7 +42,7 @@ function removeAllGrids(){
 
 // IT WILL CALCULATE GRIDNUMBER * GRIDNUMBER USING FOR LOOP
 function createDivs(num) {
-
+    
     for(let row = 0; row < num; row++){
 
         for(let col = 0; col < num; col++){
@@ -50,7 +51,7 @@ function createDivs(num) {
 
             div.classList.add("grids");
 
-            div.style.width = `calc(100% / ${gridSize})`;
+            div.style.width = `calc(100% / ${num})`;
 
             container.appendChild(div);
 
