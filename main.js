@@ -20,7 +20,8 @@ function moveScroll(){
     
         removeAllGrids();
         
-        // gridSize = parseFloat(label.textContent);
+        gridSize = parseFloat(label.textContent);
+        
         createDivs(gridSize)
     
     })
