@@ -13,7 +13,23 @@ range.addEventListener("mousemove", ()=>{
 
     label.textContent = range.value;
 
+    removeAllGrids();
+
+    createDivs(gridSize)
+
 })
+
+
+// REMOVE ALL GRIDS
+function removeAllGrids(){
+
+    while(container.firstChild){
+
+        container.removeChild(container.firstChild)
+    
+    }
+
+}
 
 
 // IT WILL CALCULATE GRIDNUMBER * GRIDNUMBER USING FOR LOOP
@@ -90,5 +106,5 @@ rgb.addEventListener("click", ()=>{
         grid.style.backgroundColor = `#${randomColor}`;
 
     }));
-    
+
 })
